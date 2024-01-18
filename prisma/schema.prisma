@@ -9,3 +9,35 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+model Users {
+  id String @id() @default(uuid())
+  name String
+  email String
+  password_hash String
+  created_at DateTime
+  checkins Checkins[]
+  @@map("user")
+}
+
+model Gyms {
+  id String @id @default(uuid())
+  title String
+  description String
+  phone String
+  latitude Decimal
+  longitude Decimal
+  checkins Checkins[]
+  @@map("gym")
+}
+model Checkins{
+  id String @id() @default(uuid())
+  created_at DateTime
+  validated_at DateTime?
+  user Users @relation(fields: [user_id],references: [id])
+  user_id String
+  gym Gyms @relation(fields: [gym_id],references: [id])
+  gym_id String
+
+  @@map("check_ins")
+ }
