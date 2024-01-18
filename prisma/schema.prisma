@@ -13,9 +13,9 @@ datasource db {
 model Users {
   id String @id() @default(uuid())
   name String
-  email String
+  email String @unique
   password_hash String
-  created_at DateTime
+  created_at DateTime @default(now())
   checkins Checkins[]
   @@map("user")
 }
@@ -28,11 +28,12 @@ model Gyms {
   latitude Decimal
   longitude Decimal
   checkins Checkins[]
+  created_at DateTime @default(now())
   @@map("gym")
 }
 model Checkins{
   id String @id() @default(uuid())
-  created_at DateTime
+  created_at DateTime @default(now())
   validated_at DateTime?
   user Users @relation(fields: [user_id],references: [id])
   user_id String
