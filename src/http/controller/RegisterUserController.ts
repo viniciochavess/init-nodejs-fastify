@@ -16,15 +16,17 @@ export async function RegisterController(req:FastifyRequest, reply:FastifyReply)
     try {
         const registerUserUseCase = await RegisterUserMake()
         const user = await registerUserUseCase.execute({email,name,password_hash})
-        reply.send(user).status(200)
+        
+        
         
     } catch (error) {
+      
         if( error instanceof InvalidCredentialsError){
-            reply.send(error.message).status(500)
+             return reply.status(409).send(error.message)
         }
 
-        reply.send().status(505)
+        reply.send().status(500)
     }
 
-
+    reply.send().status(200)
 }
