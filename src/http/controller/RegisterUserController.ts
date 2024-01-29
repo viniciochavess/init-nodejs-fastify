@@ -1,7 +1,7 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 import { z } from "zod";
-import { RegisterUserMake } from "../../make/RegisterUserMake";
-import { InvalidCredentialsError } from "../../error/Invalid-credentials-error";
+import { RegisterUserMake } from "../../usecase/factories/RegisterUserMake";
+import { InvalidCredentialsError } from "../../usecase/error/Invalid-credentials-error";
 
 export async function RegisterController(req:FastifyRequest, reply:FastifyReply){
 

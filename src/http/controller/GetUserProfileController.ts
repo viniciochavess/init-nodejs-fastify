@@ -1,5 +1,5 @@
-import { UserNotFoundError } from "@/error/user-not-found";
-import { GetUserProfileMake } from "@/make/get-user-profile-make";
+import { UserNotFoundError } from "@/usecase/error/user-not-found";
+import { GetUserProfileMake } from "@/usecase/factories/get-user-profile-make";
 import { FastifyReply, FastifyRequest } from "fastify";
 import {z} from "zod";
 

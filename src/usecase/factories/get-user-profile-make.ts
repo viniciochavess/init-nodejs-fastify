@@ -1,4 +1,4 @@
-import { PrismaUserRepository } from "@/repositories/prisma/PrismaUserRepository";
+import { PrismaUserRepository } from "@/repositories/prisma/UserRepository";
 import { GetUserProfile } from "@/usecase/get-user-profile";
 
 export function GetUserProfileMake() {

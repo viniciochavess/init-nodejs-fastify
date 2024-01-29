@@ -1,4 +1,4 @@
-import { UserNotFoundError } from "@/error/user-not-found";
+import { UserNotFoundError } from "@/usecase/error/user-not-found";
 import { IRepositoryUser, IUser } from "@/repositories/interface/IRepositoryUser";
 import { P } from "vitest/dist/reporters-1evA5lom";
 

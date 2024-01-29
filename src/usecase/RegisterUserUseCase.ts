@@ -1,5 +1,5 @@
 import {hash} from 'bcryptjs'
-import { InvalidCredentialsError } from "../error/Invalid-credentials-error";
+import { InvalidCredentialsError } from "./error/Invalid-credentials-error";
 import { IRepositoryUser, IUser } from "../repositories/interface/IRepositoryUser";
 
 export class RegisterUserUseCase{

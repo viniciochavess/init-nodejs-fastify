@@ -3,7 +3,7 @@ import { RegisterUserUseCase } from "./RegisterUserUseCase";
 import { IRepositoryUser } from "@/repositories/interface/IRepositoryUser";
 import { InMemoryUserRepository } from "@/repositories/inMemory/inMemoryUser";
 import { compare } from "bcryptjs";
-import { InvalidCredentialsError } from "@/error/Invalid-credentials-error";
+import { InvalidCredentialsError } from "@/usecase/error/Invalid-credentials-error";
 
 let repo: IRepositoryUser;
 let sut: RegisterUserUseCase;

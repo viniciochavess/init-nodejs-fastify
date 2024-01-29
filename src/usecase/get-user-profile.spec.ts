@@ -2,7 +2,7 @@ import { IRepositoryUser } from '@/repositories/interface/IRepositoryUser';
 import {expect, it, beforeEach, describe} from 'vitest'
 import { GetUserProfile } from './get-user-profile';
 import { InMemoryUserRepository } from '@/repositories/inMemory/inMemoryUser';
-import { UserNotFoundError } from '@/error/user-not-found';
+import { UserNotFoundError } from '@/usecase/error/user-not-found';
 
 let repo:IRepositoryUser;
 let sut:GetUserProfile;

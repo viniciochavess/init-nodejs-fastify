@@ -1,5 +1,5 @@
-import { InvalidCredentialsError } from "@/error/Invalid-credentials-error";
-import { AuthenticateUserMake } from "@/make/AuthenticateUserMake";
+import { InvalidCredentialsError } from "@/usecase/error/Invalid-credentials-error";
+import { AuthenticateUserMake } from "@/usecase/factories/AuthenticateUserMake";
 import { FastifyRequest, FastifyReply } from "fastify";
 import { z } from "zod";
 

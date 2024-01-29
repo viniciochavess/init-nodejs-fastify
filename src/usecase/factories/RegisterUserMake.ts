@@ -1,6 +1,6 @@
 import { InMemoryUserRepository } from "@/repositories/inMemory/inMemoryUser";
-import { PrismaUserRepository } from "../repositories/prisma/PrismaUserRepository";
-import { RegisterUserUseCase } from "../usecase/RegisterUserUseCase";
+import { PrismaUserRepository } from "../../repositories/prisma/UserRepository";
+import { RegisterUserUseCase } from "../RegisterUserUseCase";
 
 export async function RegisterUserMake() {
   const repo = new PrismaUserRepository();
