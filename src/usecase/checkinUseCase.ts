@@ -3,6 +3,7 @@ import { ICheckinsRepository } from "@/repositories/interface/ICheckinsRepositor
 interface IRequest {
   gym_id: string;
   user_id: string;
+  validate_at?: Date;
 }
 
 export class CheckinUseCase {
